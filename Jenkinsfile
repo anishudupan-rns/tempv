@@ -4,11 +4,11 @@ pipeline{
         stage('checkout'){
             steps{ git url:"https://github.com/anishudupan-rns/tempv",branch:"master"}
         }
-        stage('Test'){
-            steps{ sh 'mvn clean test'}
-        }
         stage('Build'){
-            steps{sh 'mvn compile'}
+            steps{ sh 'mvn clean package'}
+        }
+        stage('Test'){
+            steps{sh 'mvn test'}
         }
     }
     post{
