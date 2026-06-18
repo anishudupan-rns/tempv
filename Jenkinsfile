@@ -8,10 +8,10 @@ pipeline{
             steps{ git url:'https://github.com/anishudupan-rns/tempv',branch:params.BRANCH_NAME }
         }
         stage('Build'){
-            sh { 'mvn clean package' }
+            steps { sh 'mvn clean package' }
         }
         stage('Test'){
-            sh { 'mvn test' }
+            steps { sh 'mvn test' }
         }
     }
     post{
