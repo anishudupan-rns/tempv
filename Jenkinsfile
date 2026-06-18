@@ -13,7 +13,7 @@ pipeline{
     }
     post{
         always{
-            junit: 'target/*.jar'
+            junit 'target/*.jar'
         }
     }
 }
