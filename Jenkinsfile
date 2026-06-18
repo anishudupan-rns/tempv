@@ -10,7 +10,7 @@ pipeline{
     }
     post{
         success{
-            archiveArtifacts artifacts: 'build/libs/*.jar'
+            archiveArtifacts artifacts: 'target/*.jar'
         }
     }
 }
